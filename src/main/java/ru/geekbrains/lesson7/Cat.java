@@ -15,12 +15,13 @@ public class Cat {
     }
 
     public void eat(Plate p) {
-        if(p.GetFood() >= appetite) {
-            p.decreaseFood(appetite);
-            satiety = true;
+        if(appetite > p.GetFood()) {
+            System.out.println("meeaaaaaaw");
+            satiety = false;
         }
         else {
-            System.out.println("meeaaaaaaw");
+            p.decreaseFood(appetite);
+            satiety = true;
         }
     }
 
