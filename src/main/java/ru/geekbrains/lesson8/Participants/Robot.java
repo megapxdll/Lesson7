@@ -1,6 +1,6 @@
 package ru.geekbrains.lesson8.Participants;
 
-public class Robot extends Artificial_Participant{
+public class Robot implements Abstract_Participant {
     private final String label = "Robot";
     private final int Max_run_length = 200;
     private final int Max_jump_length = 5;
@@ -9,12 +9,10 @@ public class Robot extends Artificial_Participant{
         return label;
     }
 
-    @Override
     public void Run() {
         System.out.printf("%s runs: %s m %n", label, Max_run_length);
     }
 
-    @Override
     public void Jump() {
         System.out.printf("%s jumps: %s m %n", label, Max_jump_length);
     }

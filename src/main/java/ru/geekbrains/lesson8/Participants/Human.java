@@ -1,6 +1,6 @@
 package ru.geekbrains.lesson8.Participants;
 
-public class Human extends Natural_Participant {
+public class Human implements Abstract_Participant {
     private final String label = "Human";
     private final int Max_run_length = 100;
     private final int Max_jump_length = 2;
@@ -9,12 +9,10 @@ public class Human extends Natural_Participant {
         return label;
     }
 
-    @Override
     public void Run() {
         System.out.printf("%s runs: %s m %n", label, Max_run_length);
     }
 
-    @Override
     public void Jump() {
         System.out.printf("%s jumps: %s m %n", label, Max_jump_length);
     }
